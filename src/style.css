@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@600&family=Roboto:wght@400;700&display=swap');
 
 :root {
-  --tomato: hsl(4, 100%, 67%);
+  --tomato: #ff6257;
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -16,7 +16,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--dark-slate-grey)
+  background-color: var(--dark-slate-grey);
+
 }
 
 code {
@@ -82,15 +83,30 @@ input {
   padding-left: 1.5em;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid var(--dark-slate-grey)
+}
+
 input::placeholder {
   font-size: 1.1em;
 }
 
 button {
   font-weight: 700;
-  font-size: 1.05em;
+  font-size: 1.0em;
   color: var(--white);
   background-color: var(--dark-slate-grey);
   cursor: pointer;
   border: none;
+  transition: 0.2s all ease-in;
+  position: relative;
+  top: 0px;
+}
+
+button:hover {
+  background: var(--tomato);
+  background: linear-gradient(135deg, #FF467C, var(--tomato));
+  top: -5px;
+  box-shadow: #ff4b8144 0px 12px 38px, rgba(188, 76, 76, 0.22) 0px 11px 22px;
 }
